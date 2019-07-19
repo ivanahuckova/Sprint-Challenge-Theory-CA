@@ -5,28 +5,30 @@ import random
 def get_new_value(old_gen, old_automata):
     new_automata = old_automata.copy()
     start = (old_gen * SQ_NUM)
-    for i in range(start, (start + SQ_NUM)):
-        # previous generations neighbours (above, left, right)
-        prev_above = old_automata[i]
-        prev_left = old_automata[i-1]
-        prev_right = old_automata[i+1]
+    end = (old_gen * SQ_NUM + SQ_NUM)
+    if old_gen < (SQ_NUM - 1):
+        for i in range(start, end):
+            # previous generations neighbours (above, left, right)
+            prev_above = old_automata[i]
+            prev_left = old_automata[i-1]
+            prev_right = old_automata[i+1]
 
-        if prev_left and prev_above and prev_right:
-            new_automata[i + SQ_NUM] = 0
-        elif prev_left and prev_above and not prev_right:
-            new_automata[i + SQ_NUM] = 1
-        elif prev_left and not prev_above and prev_right:
-            new_automata[i + SQ_NUM] = 1
-        elif prev_left and not prev_above and not prev_right:
-            new_automata[i + SQ_NUM] = 1
-        elif not prev_left and prev_above and prev_right:
-            new_automata[i + SQ_NUM] = 1
-        elif not prev_left and prev_above and not prev_right:
-            new_automata[i + SQ_NUM] = 1
-        elif not prev_left and not prev_above and prev_right:
-            new_automata[i + SQ_NUM] = 1
-        else:
-            new_automata[i + SQ_NUM] = 0
+            if prev_left and prev_above and prev_right:
+                new_automata[i + SQ_NUM] = 0
+            elif prev_left and prev_above and not prev_right:
+                new_automata[i + SQ_NUM] = 1
+            elif prev_left and not prev_above and prev_right:
+                new_automata[i + SQ_NUM] = 1
+            elif prev_left and not prev_above and not prev_right:
+                new_automata[i + SQ_NUM] = 1
+            elif not prev_left and prev_above and prev_right:
+                new_automata[i + SQ_NUM] = 1
+            elif not prev_left and prev_above and not prev_right:
+                new_automata[i + SQ_NUM] = 1
+            elif not prev_left and not prev_above and prev_right:
+                new_automata[i + SQ_NUM] = 1
+            else:
+                new_automata[i + SQ_NUM] = 0
 
     return new_automata
 
