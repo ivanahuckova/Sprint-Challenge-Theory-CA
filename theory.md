@@ -5,15 +5,14 @@ both `antelope` and `antelopes`.)
 
 a. Single regex that matches either of these:
 
-    regex to match antelope and antelopes: /antelopes?/
-
     antelope rocks out
 
     antelopes rock out
 
-b. Regex that matches either of:
+regex to match antelope and antelopes: `/antelopes?/`
+regex to match antelope rocks out and antelopes rock out: `/antelopes? rocks? out/`
 
-    regex to match antelope and antelopes: /[g,m]oat/
+b. Regex that matches either of:
 
     goat
 
@@ -23,11 +22,11 @@ but not:
 
     boat
 
+regex to match goat and moat: `/[gm]oat/`
+
 c. Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
 month and day can each be 1-2 digits). This does not need to verify the date
 is correct (e.g 3333-33-33 can match).
-
-    regex to match YYYY-MM-DD: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/
 
     2000-10-12
 
@@ -36,6 +35,8 @@ is correct (e.g 3333-33-33 can match).
     1999-01-20
 
     812-2-10
+
+regex to match YYYY-MM-DD: `/[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/`
 
 ### 2. State Machines
 
@@ -47,6 +48,8 @@ a. Draw a state machine that corresponds to the following regex:
 
       ab*c+d?[ef]
 
+tate machine diagram: `https://www.figma.com/file/MDqCKG0GdokbTkhn4woAKd2V/State-Machines?node-id=0%3A1`
+
 Remember the ε transition can be used to move between states without
 consuming input.
 
@@ -55,6 +58,6 @@ cause state transitions.
 
     A lion can be sleeping, eating, hunting, or preening.
 
-You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. [Skipping this section *will* prevent you from passing this challenge.]
+state machine diagram: `https://www.figma.com/file/MDqCKG0GdokbTkhn4woAKd2V/State-Machines?node-id=0%3A1`
 
-ANSWERS: https://www.figma.com/file/MDqCKG0GdokbTkhn4woAKd2V/State-Machines?node-id=0%3A1
+You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. [Skipping this section *will* prevent you from passing this challenge.]
