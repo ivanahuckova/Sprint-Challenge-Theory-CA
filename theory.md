@@ -48,7 +48,7 @@ a. Draw a state machine that corresponds to the following regex:
 
       ab*c+d?[ef]
 
-tate machine diagram: `https://www.figma.com/file/MDqCKG0GdokbTkhn4woAKd2V/State-Machines?node-id=0%3A1`
+state machine diagram: `https://www.figma.com/file/MDqCKG0GdokbTkhn4woAKd2V/State-Machines?node-id=0%3A1`
 
 Remember the ε transition can be used to move between states without
 consuming input.
