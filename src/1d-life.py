@@ -1,6 +1,8 @@
 import pygame
 import random
 
+# Link to solution: https://repl.it/@ivanah/WeepyRelievedServer
+
 
 def get_new_value(old_gen, old_automata):
     new_automata = old_automata.copy()
