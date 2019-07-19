@@ -13,6 +13,7 @@ def get_new_value(old_gen, old_automata):
             prev_left = old_automata[i-1]
             prev_right = old_automata[i+1]
 
+            # logic for 126
             if prev_left and prev_above and prev_right:
                 new_automata[i + SQ_NUM] = 0
             elif prev_left and prev_above and not prev_right:
