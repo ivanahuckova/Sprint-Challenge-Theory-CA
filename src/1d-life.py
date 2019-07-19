@@ -4,6 +4,12 @@ import random
 
 def get_new_value(old_gen, old_automata):
     new_automata = old_automata.copy()
+    start = (old_gen * SQ_NUM)
+    for i in range(start, (start + SQ_NUM)):
+        # previous generations neighbours (above, left, right)
+        prev_above = old_automata[i]
+        prev_left = old_automata[i-1]
+        prev_right = old_automata[i+1]
 
     return new_automata
 
