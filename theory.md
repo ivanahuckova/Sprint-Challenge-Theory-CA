@@ -5,11 +5,15 @@ both `antelope` and `antelopes`.)
 
 a. Single regex that matches either of these:
 
+    regex to match antelope and antelopes: /antelopes?/
+
     antelope rocks out
 
     antelopes rock out
 
 b. Regex that matches either of:
+
+    regex to match antelope and antelopes: /[g,m]oat/
 
     goat
 
@@ -23,7 +27,7 @@ c. Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
 month and day can each be 1-2 digits). This does not need to verify the date
 is correct (e.g 3333-33-33 can match).
 
-regex_c = ^
+    regex to match YYYY-MM-DD: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/
 
     2000-10-12
 
